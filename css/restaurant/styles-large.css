@@ -1,0 +1,15 @@
+/* More than 800px */
+#maincontent{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+}
+.inside #map-container {
+    height: 87%;
+    position: fixed;
+    right: 0;
+    top: 80px;
+    width: 50%;
+}

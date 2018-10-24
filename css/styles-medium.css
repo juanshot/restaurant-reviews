@@ -1,0 +1,15 @@
+/* More than 800px */
+#restaurants-list li {
+    position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 10px;
+	width: 45%;
+	height: auto;
+	text-align: left;
+	cursor: pointer;
+  }
+  /* Filtering options medium screens */
+  .filter-options select {
+	width: 40%;
+  }
