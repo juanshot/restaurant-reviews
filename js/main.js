@@ -199,14 +199,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 
 } 
-/* addMarkersToMap = (restaurants = self.restaurants) => {
-  restaurants.forEach(restaurant => {
-    // Add marker to the map
-    const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.map);
-    google.maps.event.addListener(marker, 'click', () => {
-      window.location.href = marker.url
+//registering service worker
+window.addEventListener('load', () => {
+  navigator.serviceWorker.register('/sw.js')
+    .then(() => {
+      console.log("SW Registered");
+    })
+    .catch((err) => {
+      console.log('There was a problem registering SW ', err);
     });
-    self.markers.push(marker);
-  });
-} */
+});
 
