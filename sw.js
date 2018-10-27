@@ -6,6 +6,16 @@ self.addEventListener('install', (e) => {
     caches.open('cacheName').then((cache) => {
         return cache.addAll([
             '/',
+            '/img/1.jpg',
+            '/img/2.jpg',
+            '/img/3.jpg',
+            '/img/4.jpg',
+            '/img/5.jpg',
+            '/img/7.jpg',
+            '/img/8.jpg',
+            '/img/6.jpg',
+            '/img/9.jpg',
+            '/img/10.jpg',
             '/css/styles-large.css',
             '/css/styles-medium.css',
             '/css/styles-small.css',
@@ -13,16 +23,7 @@ self.addEventListener('install', (e) => {
             '/css/restaurant/styles-large.css',
             '/css/restaurant/styles-medium.css',
             '/css/restaurant/styles-small.css',
-            '/data/restaurants.json',
-            '/img/1.jpg',
-            '/img/2.jpg',
-            '/img/3.jpg',
-            '/img/4.jpg',
-            '/img/5.jpg',
-            '/img/7.jpg',
-            '/img/8.jpg','/img/6.jpg',
-            '/img/9.jpg',
-            '/img/10.jpg',
+            '/data/restaurants.json'
         ])
     })
   );
@@ -52,8 +53,7 @@ self.addEventListener('fetch', (ev) => {
         })
       );
   });
-
-// Removes cache after activating
+/* After activating removing cache */
 self.addEventListener('activate', (ev) => {
   ev.waitUntil(
     caches.keys().then((cacheNames) => {
